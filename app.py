@@ -11,15 +11,15 @@ def home():
 @app.route('/submit', methods=['POST'])
 def submit_form():
     payload = request.get_json()
-    print payload
+    print (payload)
     first_name = payload['first_name']
     middle_name = payload['middle_name']
     last_name = payload['last_name']
     date_of_birth = payload['date_of_birth']
     address = payload['address']
     hobby = payload['hobby']
-    print first_name, middle_name, last_name, date_of_birth, address, hobby
-    return ''
+    print (first_name, middle_name, last_name, date_of_birth, address, hobby)
+    return ('')
 
 
 @app.route('/sw.js', methods=['GET'])
